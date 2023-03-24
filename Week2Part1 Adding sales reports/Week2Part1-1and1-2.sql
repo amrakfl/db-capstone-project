@@ -84,3 +84,15 @@ SELECT CONCAT("Order ", CancelOrderID, " is cancelled") AS Confirmation;
 END$$
 DELIMITER ;
 CALL CancelOrder(5);
+
+
+USE `LittleLemonDB`;
+DROP procedure IF EXISTS `ManageBooking`;
+DELIMITER $$
+USE `LittleLemonDB`$$
+CREATE PROCEDURE ManageBooking ()
+BEGIN
+SELECT * FROM Bookings;
+END$$
+DELIMITER ;
+CALL ManageBooking()
